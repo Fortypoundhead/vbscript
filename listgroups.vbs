@@ -7,8 +7,8 @@ Set objRootLDAP = GetObject("LDAP://RootDSE")
 strDNSDomain = objRootLDAP.Get("DefaultNamingContext")
 
 ' Build the LDAP DN from strUser, strOU and strDNSDomain
-strUser ="cn=dsison,"
-strOU ="CN=migration,CN=MigLRW,CN=LRWUsers,"
+strUser ="cn=username,"
+strOU ="CN=container,CN=container,CN=container,"
 strLDAP ="LDAP://" & strUser & strOU & strDNSDomain
 
 wscript.echo strLDAP
